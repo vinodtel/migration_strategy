@@ -41,9 +41,8 @@ flowchart TD
 	M[main.cpp\nreads aidl_hal_available] --> F[HDMICecHalFactory]
 	F -->|true| A[AidlHAL]
 	F -->|false| L[LegacyHAL]
-	A --> I[HDMICecHal interface]
-	L --> I
-	I --> O[HdmiCecOpen call path]
+	A --> I[Binder HAL calls]
+	L --> K[Legacy HAL calls]
 ```
 
 ## Prerequisites
